@@ -25,9 +25,12 @@ class Solution {
 
     void printGfg(int N) {
         // code here
-        for(int i=1;i<=N;i++)
+        if(N==1)
         {
             System.out.print("GFG"+" ");
+        }else{
+            System.out.print("GFG"+" ");
+            printGfg(N-1);
         }
     }
 }
