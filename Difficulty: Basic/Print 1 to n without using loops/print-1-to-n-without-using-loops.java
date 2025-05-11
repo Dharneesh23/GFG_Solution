@@ -27,9 +27,13 @@ class GFG
 class Solution {
     static void printTillN(int N) {
         // code here
-        for(int i=1;i<=N;i++)
-        {
-            System.out.print(i+" ");
-        }
+      if(N==0)
+      {
+          return;
+      }
+      else{
+          printTillN(N-1);
+          System.out.print(N+" ");
+      }
     }
 }
