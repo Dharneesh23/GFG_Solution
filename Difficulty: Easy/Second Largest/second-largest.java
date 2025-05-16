@@ -27,22 +27,22 @@ public class Main {
 class Solution {
     public int getSecondLargest(int[] arr) {
         // code here
-        int firstLargest = arr[0];
-        int secondLargest = -1;
+        int firstelement = arr[0];
+        int secondelement = -1;
         for(int i=0;i<arr.length;i++)
         {
-            if(arr[i]>firstLargest)
+            if(arr[i]>firstelement)
             {
-                firstLargest = arr[i];
+                firstelement = arr[i];
             }
         }
         for(int i=0;i<arr.length;i++)
         {
-            if(arr[i]> secondLargest && arr[i]!= firstLargest )
+            if(arr[i]>secondelement && arr[i]!=firstelement)
             {
-                secondLargest = arr[i];
+                secondelement =  arr[i];
             }
         }
-        return secondLargest;
+        return secondelement;
     }
 }
