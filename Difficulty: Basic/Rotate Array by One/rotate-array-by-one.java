@@ -45,12 +45,25 @@ System.out.println("~");
 class Solution {
     public void rotate(int[] arr) {
         // code here
-        int n = arr.length-1;
-        int temp = arr[n];
-        for(int i=n;i>0;i--)
+       int n = arr.length;
+       int k = 1;
+       k = k%n;
+       reverse(arr,0,n-1);
+       reverse(arr,0,k-1);
+       reverse(arr,k,n-1);
+       
+       
+    }
+    public void reverse(int[]arr,int start,int end)
+    {
+        while(start<=end)
         {
-            arr[i] = arr[i-1];
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+           
+            start++;
+            end--;
         }
-        arr[0] = temp;
     }
 }
