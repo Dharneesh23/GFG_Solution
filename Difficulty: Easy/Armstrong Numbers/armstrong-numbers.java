@@ -29,27 +29,19 @@ class GFG {
 class Solution {
     static boolean armstrongNumber(int n) {
         // code here
-        int count = 0;
+        int count = (int)Math.log10(n)+1;
         int org = n;
-        int temp = n;
-        int rev =0;
         int sum =0;
         while(n!=0)
         {
+            int digit = n%10;
+            sum+=Math.pow(digit,count);
             n/=10;
-            count++;
         }
-        while(temp !=0)
-        {
-           int digit = temp%10;
-           sum+=Math.pow(digit,count);
-           temp/=10;
-        }
-        if(org==sum)
+        if(sum==org)
         {
             return true;
         }
         return false;
-        
     }
 }
