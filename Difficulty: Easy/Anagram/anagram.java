@@ -5,10 +5,10 @@ class Solution {
         {
             return false;
         }
-        char[]a1 = s1.toCharArray();
-        char[]a2 = s2.toCharArray();
-        Arrays.sort(a1);
-        Arrays.sort(a2);
-        return Arrays.equals(a1,a2);
+        char[]a = s1.toCharArray();
+        char[]b = s2.toCharArray();
+        Arrays.sort(a);
+        Arrays.sort(b);
+        return Arrays.equals(a,b);
     }
 }
