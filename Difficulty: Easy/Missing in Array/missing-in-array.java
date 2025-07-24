@@ -1,13 +1,14 @@
 class Solution {
     int missingNum(int arr[]) {
         // code here
-        int n = arr.length;
-      long sum =(long)(n+1)*(n+2)/2;
-    long total = 0;
-        for(int num : arr)
+        long sum =0;
+        int tol = 0;
+        for(int n : arr)
         {
-            total+=num;
+            tol+=n;
         }
-        return (int) (sum-total);
+        int n = arr.length;
+        sum = (long)(n+1)*(n+2)/2;
+        return (int)sum-tol;
     }
 }
