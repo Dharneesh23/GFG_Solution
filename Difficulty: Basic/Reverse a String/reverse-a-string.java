@@ -3,11 +3,18 @@
 class Solution {
     public static String reverseString(String s) {
         // code here
-        StringBuilder ans = new StringBuilder();
-        for(int i = s.length()-1;i>=0;i--)
+         char[]ch = s.toCharArray();
+        int left =0;
+        int right = ch.length-1;
+       
+        while(left<right)
         {
-            ans=ans.append(s.charAt(i));
+           char temp = ch[left];
+           ch[left] = ch[right];
+           ch[right] = temp;
+           left++;
+           right--;
         }
-        return String.valueOf(ans);
+        return new String (ch);
     }
 }
